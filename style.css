@@ -6,9 +6,82 @@
     --moz-osx-font-smoothing: grayscale;
 }
 :root {
+    font-family: 'Mulish', sans-serif;
     font-size: 62.5%;
+    --main-bg: #F5F5F5;
+    --white: #FFF;
+    --main-text: #202024;
+    --input-bg: #EEE;
+    --input-color: #3D3D3D;
+    --nav-text: #8D8D99;
 }
 
 body {
     font-size: 1.6rem;
+    background: var(--main-bg);
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 
+        'header header header'
+        'main main main'
+        'footer footer footer';
+}
+
+header {
+    grid-area: header;
+    background: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 11rem;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 7.6rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--nav-text);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: var(--main-text);
+}
+
+header input {
+    background: var(--input-bg);
+    width: 71.8rem;
+    height: 4.8rem;
+    padding: 1.2rem 1.6rem;
+    border: none;
+    border-radius: 5px;
+    opacity: .6;
+}
+
+header input::placeholder {
+    font-weight: 600;
+    color: var(--input-color);
+}
+
+main {
+    grid-area: main;
+    padding: 4rem 11rem;
+}
+
+footer {
+    grid-area: footer;
+    width: 100%;
+    background: var(--white);
+    padding: 1.6rem 3rem;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
 }
