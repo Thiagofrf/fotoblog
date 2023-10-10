@@ -8,12 +8,13 @@
 :root {
     font-family: 'Mulish', sans-serif;
     font-size: 62.5%;
-    --main-bg: #F5F5F5;
-    --white: #FFF;
-    --main-text: #202024;
-    --input-bg: #EEE;
-    --input-color: #3D3D3D;
-    --nav-text: #8D8D99;
+    --hue: 240;
+    --main-bg: hsl(0, 0%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --main-text: hsl(var(--hue), 6%, 13%);
+    --input-bg: hsl(0, 0%, 93%);
+    --input-color: hsl(0, 0%, 24%);
+    --nav-text: hsl(var(--hue), 6%, 58%);
 }
 
 body {
